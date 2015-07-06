@@ -1,0 +1,18 @@
+# Configuration file template
+
+parameters:
+  mysql-bin-dir: /usr/bin
+  liberty-install-dir: /opt/was/liberty
+  server-img: "TODO"
+  timeout: "1440"
+  mysql-sg: "TODO"
+  was-liberty-sg: "TODO"
+  flavor: "m1.medium"
+  key_name: "demo_key"
+  availability_zone: "nova"
+  private_network: "TODO"
+  ucd_server_url: "http://192.168.27.100:8081"
+  ucd_user: "admin"
+  ucd_password: "admin"
+  ucd_relay_url: "None"
+  public_network: "TODO" # public

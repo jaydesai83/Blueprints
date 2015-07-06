@@ -1,0 +1,35 @@
+# Configuration file template
+
+resource_registry:
+  OS::Nova::Server : IBM::EC2::Server
+  OS::Cinder::Volume : IBM::EC2::Volume
+  OS::Cinder::VolumeAttachment : IBM::EC2::VolumeAttachment
+  OS::Neutron::Port : IBM::EC2::Port
+  OS::Neutron::Net : IBM::EC2::VPC
+  OS::Neutron::Subnet : IBM::EC2::Subnet
+  OS::Neutron::Router : IBM::EC2::RouteTable
+  OS::Neutron::RouterGateway : IBM::EC2::InternetGateway
+  OS::Neutron::RouterInterface : IBM::EC2::RouteTableAssociation
+  OS::Neutron::FloatingIP : IBM::EC2::EIP
+  OS::Neutron::FloatingIPAssociation : IBM::EC2::EIPAssociation
+  OS::Neutron::SecurityGroup : IBM::EC2::SecurityGroup
+  OS::Heat::AutoScalingGroup : IBM::EC2::AutoScalingGroup
+  OS::Heat::ScalingPolicy : IBM::EC2::AutoScalingPolicy
+  OS::Ceilometer::Alarm : IBM::EC2::Alarm
+  OS::Swift::Container : IBM::S3::Bucket
+parameters:
+  mysql-bin-dir: /usr/bin
+  liberty-install-dir: /opt/was/liberty
+  server-img: "ami-9a562df2"
+  timeout: "1440"
+  mysql-sg: "TODO"
+  was-liberty-sg: "TODO"
+  flavor: "t2.medium" # Burstable Performance Medium Instance
+  key_name: "ucdp-demo-key"
+  availability_zone: "us-east-1a"
+  private_network: "TODO"
+  ucd_server_url: "http://192.168.27.100:8081"
+  ucd_user: "admin"
+  ucd_password: "admin"
+  ucd_relay_url: "TODO"
+  public_network: "TODO"
